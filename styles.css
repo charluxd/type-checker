@@ -22,7 +22,7 @@
 body {
   font-family: Faune, sans-serif;
   color: #2a2a2a;
-  margin: 40px 40px 40px 480px;
+  margin: 0 0 0 400px;
 }
 
 h1 {
@@ -36,13 +36,97 @@ section.settings {
   top: 0;
   left: 0;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: #fafafa;
   padding: 40px;
-  min-width: 320px;
+  width: 320px;
 }
 
 div.settings {
-  margin: 24px 0;
+  margin: 32px 0;
+}
+
+input {
+  display: block;
+  padding: 12px 16px;
+  margin: 8px 0 0 0;
+  width: 91%;
+}
+
+input[type='text'] {
+  width: 91%;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus {
+  border: 1px solid #a8a8a8;
+}
+
+input[type='range'] {
+  width: 91%;
+}
+
+select {
+  appearance: none; /* Standard property */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  color: #2a2a2a;
+
+  background-image: url('assets/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+select:focus {
+  border: 1px solid #a8a8a8;
+}
+
+select.option {
+  margin-top: 8px;
+}
+
+textarea.output {
+  font-size: 64px;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+}
+
+label span {
+  float: right;
+}
+
+div.colors {
+  display: flex;
+}
+
+div.colors div {
+  margin: 8px;
+  height: 32px;
+  width: 32px;
+  line-height: 1.6;
+  color: #000;
+  background-color: #e6e6e6;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  text-align: center;
+  transition: border 0.25s;
+}
+
+div.colors div.selected {
+  border: 2px solid #a8a8a8;
 }
 
 div.settings-checkbox {
@@ -51,42 +135,19 @@ div.settings-checkbox {
   align-items: center;
 }
 
-input {
-  display: block;
-  padding: 8px 12px;
-  margin: 8px 0 0 0;
-  width: 100%;
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #e6e6e6;
 }
 
-input[type='text'] {
-  width: 100%;
-  background: #fafafa;
-  border: none;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-input[type='text']:focus {
-  border-color: 1px solid #2a2a2a;
-}
-
-input[type='range'] {
-  width: 100%;
-}
-
-select {
-  width: 100%;
-}
-
-textarea.output {
-  font-size: 64px;
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100vh;
-}
-
-label span {
-  float: right;
+input[type='checkbox']:checked {
+  background-color: #2a2a2a;
+  background-image: url('assets/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }

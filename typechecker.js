@@ -13,6 +13,8 @@ const italicTag = document.querySelector(`input[name = 'italic']`);
 
 const typefaceTag = document.querySelector(`select[name ='typeface']`);
 
+const colorTags = document.querySelectorAll('div.colors div');
+
 const outputTag = document.querySelector('textarea.output');
 const originalText = outputTag.value;
 
@@ -65,4 +67,22 @@ italicTag.addEventListener('change', function () {
 //when I change the typeface, update the outputTag's typeface
 typefaceTag.addEventListener('input', function () {
   outputTag.style.fontFamily = this.value;
+});
+
+// go through all of the color tags
+// when I click on one of them, change the background color
+// and the font color, and make this tag be selected
+colorTags.forEach((tag) => {
+  tag.addEventListener('click', function () {
+    outputTag.style.backgroundColor = this.style.backgroundColor;
+    outputTag.style.color = this.style.color;
+
+    //reset the classes
+    colorTags.forEach((tag) => {
+      tag.classList.remove('selected');
+    });
+
+    //only to this clicked one
+    this.classList.add('selected');
+  });
 });

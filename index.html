@@ -31,7 +31,14 @@
 
       <div class="settings">
         <label>Type Size<span class="typesize-output">64px</span></label>
-        <input type="range" name="typesize" min="12" max="200" value="64" />
+        <input
+          type="range"
+          name="typesize"
+          min="12"
+          max="200"
+          value="64"
+          class="slider"
+        />
       </div>
 
       <div class="settings">
@@ -43,6 +50,7 @@
           max="900"
           value="400"
           step="100"
+          class="slider"
         />
       </div>
 
@@ -55,12 +63,30 @@
           max="2.5"
           value="1.5"
           step="0.25"
+          class="slider"
         />
       </div>
 
       <div class="settings settings-checkbox">
         <label>Italic</label>
         <input type="checkbox" name="italic" />
+      </div>
+
+      <div class="settings">
+        <label>Colors</label>
+        <div class="colors">
+          <div
+            style="background-color: #ffffff; color: #2a2a2a"
+            class="selected"
+          >
+            a
+          </div>
+          <div style="background-color: #ffe494; color: #2a2a2a">a</div>
+          <div style="background-color: #fdc3be; color: #2a2a2a">a</div>
+          <div style="background-color: #fe7b72; color: #2a2a2a">a</div>
+          <div style="background-color: #018f9c; color: #ffffff">a</div>
+          <div style="background-color: #83739e; color: #ffffff">a</div>
+        </div>
       </div>
     </section>
     <textarea class="output">
