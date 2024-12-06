@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Type Checker</title>
+  </head>
+  <body>
+    <section class="settings">
+      <h1>Type Checker</h1>
+
+      <div class="settings">
+        <label>Your Text</label>
+        <input
+          type="text"
+          name="sentence"
+          placeholder="The quick brown fox..."
+        />
+      </div>
+
+      <div class="settings">
+        <label>Type Size<span>64px</span></label>
+        <input type="range" name="type-size" min="12" max="200" value="64" />
+      </div>
+
+      <div class="settings">
+        <label>Font Weight</label>
+        <input type="range" name="font-weight" />
+      </div>
+
+      <div class="settings">
+        <label>Leading</label>
+        <input type="range" name="leading" />
+      </div>
+    </section>
+    <textarea class="output">
+The quick brown fox jumps over the lazy dog.
+    </textarea>
+  </body>
+  <script src="typechecker.js"></script>
+</html>
