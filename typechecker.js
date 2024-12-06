@@ -3,10 +3,15 @@ const sentenceTag = document.querySelector(`input[type = 'text']`);
 const typesizeTag = document.querySelector(`input[name = 'typesize']`);
 const typesizeOutput = document.querySelector(`span.typesize-output`);
 
+const fontweightTag = document.querySelector(`input[name ='fontweight']`);
+const fontweightOutput = document.querySelector(`span.fontweight-output`);
+
 const lineheightTag = document.querySelector(`input[name = 'leading']`);
 const lineheightOutput = document.querySelector(`span.lineheight-output`);
 
 const italicTag = document.querySelector(`input[name = 'italic']`);
+
+const typefaceTag = document.querySelector(`select[name ='typeface']`);
 
 const outputTag = document.querySelector('textarea.output');
 const originalText = outputTag.value;
@@ -33,6 +38,13 @@ typesizeTag.addEventListener('input', function () {
   typesizeOutput.innerHTML = this.value + 'px';
 });
 
+//when I change my fontweight slider, update the fontweight next to it AND,
+//change the outputTag's fontweight
+fontweightTag.addEventListener('input', function () {
+  outputTag.style.fontWeight = this.value;
+  fontweightOutput.innerHTML = this.value;
+});
+
 //when I change my leading slider, update the text next to it AND,
 //change the outputTag's leading
 lineheightTag.addEventListener('input', function () {
@@ -48,4 +60,9 @@ italicTag.addEventListener('change', function () {
   } else {
     outputTag.style.fontStyle = 'normal';
   }
+});
+
+//when I change the typeface, update the outputTag's typeface
+typefaceTag.addEventListener('input', function () {
+  outputTag.style.fontFamily = this.value;
 });

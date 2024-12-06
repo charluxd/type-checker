@@ -20,13 +20,30 @@
       </div>
 
       <div class="settings">
+        <label>Typeface</label>
+        <select name="typeface">
+          <option value="Noto Serif Display">Noto Serif Display</option>
+          <option value="Taviraj">Taviraj</option>
+          <option value="Poppins">Poppins</option>
+          <option value="Montserrat">Montserrat</option>
+        </select>
+      </div>
+
+      <div class="settings">
         <label>Type Size<span class="typesize-output">64px</span></label>
         <input type="range" name="typesize" min="12" max="200" value="64" />
       </div>
 
       <div class="settings">
-        <label>Font Weight</label>
-        <input type="range" name="fontweight" />
+        <label>Font Weight<span class="fontweight-output">400</span></label>
+        <input
+          type="range"
+          name="fontweight"
+          min="100"
+          max="900"
+          value="400"
+          step="100"
+        />
       </div>
 
       <div class="settings">
