@@ -26,7 +26,6 @@ body {
 h1 {
   font-weight: 700;
   font-size: 48px;
-  line-height: 1.5;
   margin: 0;
 }
 
@@ -42,6 +41,12 @@ section.settings {
 
 div.settings {
   margin: 24px 0;
+}
+
+div.settings-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 input {
